@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<script>
+</script>
+
+</body>
+<script>
+    let array = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let array1 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let check = false;
+    let index = 0;
+    let wordGuess = prompt("Enter your star: ");
+
+    function checkArray(str) {
+        for (let i = 0; i < array.length; i++){
+            if(wordGuess === array[i]){
+                index = i;
+                check = true;
+                break;
+            }
+        }
+        if (check) {
+            alert("Result: " + array1[index]);
+        } else{
+            alert("We can't find your star! Please try again");
+        }
+    }
+
+    checkArray(wordGuess);
+</script>
+</html>
